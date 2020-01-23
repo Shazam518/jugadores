@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JugadorComponent } from './pages/jugador/jugador.component';
 import {AppRoutingModule} from './app-routing.module';
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {AppRoutingModule} from './app-routing.module';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [CrudAppService],
   bootstrap: [AppComponent]
