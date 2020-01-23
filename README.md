@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Futbol
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.18.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# jugadores
+ registro de jugadores de futbol
+>>>>>>> bb5c87d8cb725c52a9b76157605c8bb9d1dc6471
