@@ -2,7 +2,8 @@ export class Player{
   key?: string;
   nombre  = 'Francisco';
   apellido = 'Palencia';
-  pais = Countries;
+  pais = null;
+  equipo = null;
 }
 
 export const Countries = [
@@ -38,12 +39,34 @@ export const Countries = [
     codigo: 'AR',
     pai: 'Argentina',
   }
-
-
-
-
 ]
 
+export const Team = [
+  {
+    codigo: 'UM',
+    nom: 'Pumas',
+  },
+  {
+    codigo: 'MTY',
+    nom: 'Monterrey'
+  },
+  {
+    codigo: 'TIG',
+    nom: 'Tigres',
+  },
+  {
+    codigo: 'AME',
+    nom: 'America',
+  },
+  {
+    codigo: 'GDL',
+    nom: 'Guadalajara',
+  },
+  {
+    codigo: 'CAZ',
+    nom: 'Cruz Azul',
+  },
+]
 
 
 

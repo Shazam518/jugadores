@@ -25,7 +25,14 @@
           <mat-option *ngFor="let lugar of paises" [value]="lugar.codigo">{{lugar.pai}}</mat-option>
         </mat-select>
       </mat-form-field>
+    </div>
 
+    <div class="row">
+      <mat-form-field class="example-container" appearance="outline">
+        <mat-select placeholder="Selecciona el equipo del jugador" formControlName="equipo">
+          <mat-option *ngFor="let equipo of equipos" [value]="equipo.codigo">{{equipo.nom}}</mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
 
     <div class="text-center">
