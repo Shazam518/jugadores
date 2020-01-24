@@ -9,6 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JugadorComponent } from './pages/jugador/jugador.component';
 import {AppRoutingModule} from './app-routing.module';
 import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSelectModule} from '@angular/material/select';
+
+
 
 
 @NgModule({
@@ -24,7 +28,9 @@ import {MatInputModule} from '@angular/material/input';
     ReactiveFormsModule,
     AppRoutingModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule
   ],
   providers: [CrudAppService],
   bootstrap: [AppComponent]
