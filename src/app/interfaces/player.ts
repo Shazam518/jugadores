@@ -6,7 +6,6 @@ export class Player{
   equipo = null;
   posicion = null;
   pie = 'Diestro';
-  capitan = 'No';
 }
 
 export const Countries = [

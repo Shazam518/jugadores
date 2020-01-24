@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import {JugadorComponent} from '../app/pages/jugador/jugador.component';
 import {RouterModule, Routes} from '@angular/router';
+import {TablaComponent} from './pages/tabla/tabla.component';
 
 const routes: Routes = [
-  {path: 'Jugadores', component: JugadorComponent},
-  {path: '**', pathMatch: 'full', redirectTo: 'Jugadores'}
+  {path: 'Tabla', component: TablaComponent},
+  {path: 'Jugadores/:key', component: JugadorComponent},
+  {path: '**', pathMatch: 'full', redirectTo: 'Tabla'}
 ]
 
 
