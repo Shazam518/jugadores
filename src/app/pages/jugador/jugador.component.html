@@ -21,8 +21,8 @@
 
     <div class="row">
       <mat-form-field class="example-container" appearance="outline">
-        <mat-select placeholder="Select">
-          <mat-option value="option">Option</mat-option>
+        <mat-select placeholder="Selecciona el país del jugador" formControlName="pais">
+          <mat-option *ngFor="let lugar of paises" [value]="lugar.codigo">{{lugar.pai}}</mat-option>
         </mat-select>
       </mat-form-field>
 
