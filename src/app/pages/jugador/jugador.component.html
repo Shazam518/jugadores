@@ -1,21 +1,25 @@
 <div class="container mt-4">
-  <h1>Formulario <small>de jugadores de futbol</small></h1>
-  <br>
+    <h1>Formulario <small>de jugadores de futbol</small></h1>
+    <hr>
 </div>
 <div class="container mt-4">
   <form [formGroup]="forma" (ngSubmit)="guardar()" novalidate="novalidate">
 
-    <div class="row">
+    <div class="row mb-3">
       <mat-form-field class="example-container" appearance="outline">
         <mat-label>Judagor: </mat-label>
         <input matInput formControlName="nombre" placeholder="Nombre del jugador:">
+        <mat-error *ngIf="forma.controls['nombre'].errors?.required" class="mb-1">El nombre del jugador es requerido</mat-error>
+        <mat-error *ngIf="!forma.controls['nombre'].errors?.minlenght" >Mínimo dos letras en el nombre del jugador</mat-error>
       </mat-form-field>
     </div>
 
-      <div class="row">
+      <div class="row mb-3">
         <mat-form-field class="example-container" appearance="outline">
           <mat-label>Apellido: </mat-label>
           <input matInput formControlName="apellido" placeholder="Apellido del jugador">
+          <mat-error *ngIf="forma.controls['apellido'].errors?.required" class="mb-1">El apellido del jugador es requerido</mat-error>
+          <mat-error *ngIf="!forma.controls['apellido'].errors?.minlenght" >Mínimo dos letras en el apellido del jugador</mat-error>
         </mat-form-field>
       </div>
 
@@ -35,8 +39,25 @@
       </mat-form-field>
     </div>
 
+    <div class="row">
+      <mat-form-field class="example-container" appearance="outline">
+        <mat-select placeholder="Selecciona la posición del jugador" formControlName="posicion">
+          <mat-option *ngFor="let positon of positions" [value]="positon.position">{{positon.position}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-radio-group aria-label="Select an option" formControlName="pie">
+        <mat-radio-button value="Diestro">Diestro</mat-radio-button>
+        <mat-radio-button value="Zurdo">Zurdo</mat-radio-button>
+      </mat-radio-group>
+
+    </div>
+
+
     <div class="text-center">
-      <button mat-raised-button color="primary">Guardar</button>
+      <button mat-raised-button color="primary" [disabled] = "!forma.valid" >Guardar</button>
     </div>
 
 
