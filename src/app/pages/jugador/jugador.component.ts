@@ -33,9 +33,17 @@ export class JugadorComponent implements OnInit {
   }
 
   guardar() {
-    this.crudservice.crearJugador(this.forma.value).subscribe(resp => {
-      console.log(resp);
-    });
+    if (this.jugador.key){
+      this.crudservice.actualizarJugador(this.jugador).subscribe(resp =>{
+        console.log(resp);
+      });
+
+    } else{
+      this.crudservice.crearJugador(this.forma.value).subscribe(resp => {
+        console.log(resp);
+        this.jugador = resp;
+      });
+    }
   }
 }
 

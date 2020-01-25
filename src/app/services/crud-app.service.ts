@@ -35,4 +35,12 @@ export class CrudAppService {
     return jugadores;
   }
 
+  actualizarJugador(jugador: Player){
+    const jugadorTemp ={
+      ...jugador
+    };
+    delete jugadorTemp.key
+    return this.http.put(`${this.url}/Jugador/${jugador.key}.json`, jugadorTemp);
+  }
+
 }
